@@ -1,0 +1,54 @@
+/*
+ ============================================================================
+ Name        : arrange.c
+ Author      : agn
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int ordenar(int *pArray, int limite);
+
+int main(void) {
+
+	int vector[6];
+
+	ordenar(&vector, 6);
+	return EXIT_SUCCESS;
+}
+
+int ordenar(int *pArray, int limite)
+{
+	int i;
+	int aux;
+	int flagUnarranged;
+
+	flagUnarranged = 1;
+
+	while (flagUnarranged == 1){
+
+		for (i=0; i<(limite-1); i++)
+		{
+
+			if (pArray[i] > pArray[i+1])
+			{
+				aux = pArray[i];
+				pArray[i] = pArray[i+1];
+				pArray[i+1] = aux;
+				flagUnarranged = 1;
+			}
+			else
+			{
+				flagUnarranged = 0;
+			}
+		}
+	}
+	return 0;
+}
+
+
+
+

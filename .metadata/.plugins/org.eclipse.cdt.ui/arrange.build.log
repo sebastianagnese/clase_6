@@ -1,0 +1,22 @@
+22:19:53 **** Incremental Build of configuration Debug for project arrange ****
+make all 
+Building file: ../src/arrange.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrange.d" -MT"src/arrange.o" -o "src/arrange.o" "../src/arrange.c"
+../src/arrange.c: In function ‘main’:
+../src/arrange.c:19:10: warning: passing argument 1 of ‘ordenar’ from incompatible pointer type [-Wincompatible-pointer-types]
+  ordenar(&vector, 6);
+          ^
+../src/arrange.c:13:5: note: expected ‘int *’ but argument is of type ‘int (*)[6]’
+ int ordenar(int *pArray, int limite);
+     ^~~~~~~
+Finished building: ../src/arrange.c
+ 
+Building target: arrange
+Invoking: GCC C Linker
+gcc  -o "arrange"  ./src/arrange.o   
+Finished building target: arrange
+ 
+
+22:19:53 Build Finished. 0 errors, 1 warnings. (took 335ms)
+
